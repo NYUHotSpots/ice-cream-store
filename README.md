@@ -1,6 +1,6 @@
 # Welcome to ColdScoop's Ice Cream Store
 
-[![Build Status](https://app.travis-ci.com/kevin-chen/umbrella-store.svg?branch=master)](https://app.travis-ci.com/kevin-chen/umbrella-store)
+[![Build Status](https://app.travis-ci.com/ColdScoop/ice-cream-store.svg?branch=main)](https://app.travis-ci.com/ColdScoop/ice-cream-store)
 
 ## Requirements
 
