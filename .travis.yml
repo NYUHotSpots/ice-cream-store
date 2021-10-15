@@ -6,7 +6,7 @@ install:
     - pip install -r requirements-dev.txt
 
 env:
-    - PYTHONPATH=/home/travis/build/kevin-chen/umbrella-store
+    - PYTHONPATH=/home/travis/build/ColdScoop/ice-cream-store/
 
 script:
     - make tests
