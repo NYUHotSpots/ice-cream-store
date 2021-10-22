@@ -66,6 +66,7 @@ class CreateUser(Resource):
         """
         return username
 
+
 @api.route('/ice-cream')
 class Pets(Resource):
     """
