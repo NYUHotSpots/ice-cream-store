@@ -7,7 +7,6 @@
 - List menu items -- include pictures
 - List prices for menu items
 - Allow users to add items to Shopping Cart
-- test my push
 - 
 
 ## Design 
