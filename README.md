@@ -4,11 +4,16 @@
 
 ## Requirements
 
+- List menu items -- include pictures
+- List prices for menu items
+- Allow users to add items to Shopping Cart
 - 
 
 ## Design 
 
+- Use flask_restx to build an API server
 - 
+-  
 
 ## Setup
 
