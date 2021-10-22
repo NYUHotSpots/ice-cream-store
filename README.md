@@ -14,7 +14,7 @@
 
 - Use flask_restx to build an API server
 - 
--  aasdf
+-  
 
 ## Setup
 
