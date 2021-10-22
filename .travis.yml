@@ -11,8 +11,9 @@ env:
 script:
     - make tests
 
-# after_success:
-#     - ./deploy.sh
-
-# notifications:
-#   slack: devopsnyu:vAFcJBgAP2f73SqhWgb40Gjf
+deploy:
+    - provider: heroku
+      api_key: $HEROKU_API_KEY
+      app: cold-scoop-ice-cream-store
+      on:
+          branch: main
