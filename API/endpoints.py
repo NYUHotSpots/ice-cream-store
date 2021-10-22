@@ -55,6 +55,17 @@ class Endpoints(Resource):
         return {"Available endpoints": endpoints}
 
 
+@api.route('/username')
+class CreateUser(Resource):
+    """
+    This class supports fetching a list of all pets.
+    """
+    def post(self, username):
+        """
+        This method adds the user to the chat room
+        """
+        return username
+
 @api.route('/ice-cream')
 class Pets(Resource):
     """
