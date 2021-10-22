@@ -12,7 +12,7 @@
 ## Design 
 
 - Use flask_restx to build an API server
-- 
+- Building a scuffed ice cream store
 
 ## Setup
 
