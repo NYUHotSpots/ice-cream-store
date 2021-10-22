@@ -8,7 +8,6 @@
 - List prices for menu items
 - Allow users to add items to Shopping Cart
 - 
-- 
 
 ## Design 
 
