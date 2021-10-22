@@ -28,6 +28,19 @@ class HelloWorld(Resource):
         return {HELLO: WORLD}
 
 
+@api.route('/list_rooms')
+class ListRoom(Resource):
+    """
+    This endpoint returns a list of all rooms.
+    """
+    def get(self):
+        """
+        Returns a list of all chat rooms.
+        """
+        return {"Software Engineering": {"num_users": 17},
+                "AI": {"num_users": 27}, }
+
+
 @api.route('/endpoints')
 class Endpoints(Resource):
     """
@@ -40,6 +53,18 @@ class Endpoints(Resource):
         """
         endpoints = sorted(rule.rule for rule in api.app.url_map.iter_rules())
         return {"Available endpoints": endpoints}
+
+
+@api.route('/username')
+class CreateUser(Resource):
+    """
+    This class supports fetching a list of all pets.
+    """
+    def post(self, username):
+        """
+        This method adds the user to the chat room
+        """
+        return username
 
 
 @api.route('/ice-cream')
