@@ -3,6 +3,7 @@ This is the file containing all of the endpoints for our flask app.
 The endpoint called `endpoints` will return all available endpoints.
 """
 
+from http import HTTPStatus
 from flask import Flask
 from flask_restx import Resource, Api
 import db.db as db
@@ -12,7 +13,6 @@ api = Api(app)
 
 HELLO = 'Hola'
 WORLD = 'mundo'
-
 
 @api.route('/hello')
 class HelloWorld(Resource):
@@ -68,7 +68,7 @@ class CreateUser(Resource):
 
 
 @api.route('/ice-cream')
-class Pets(Resource):
+class GetIceCream(Resource):
     """
     This class supports fetching a list of all pets.
     """
@@ -76,4 +76,4 @@ class Pets(Resource):
         """
         This method returns all pets.
         """
-        return db.fetch_pets()
+        return db.get_ice_cream()
