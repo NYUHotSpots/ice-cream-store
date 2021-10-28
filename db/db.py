@@ -6,12 +6,10 @@ Gradually, we will fill in actual calls to our datastore.
 
 import json
 import os
-# from dotenv import load_dotenv
-
-# load_dotenv()
 
 path = os.environ["DB_Path"]
 ICE_CREAM_DB = f"{path}/db/ice_cream.json"
+
 
 def get_ice_cream():
     """
