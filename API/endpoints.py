@@ -68,13 +68,13 @@ class CreateUser(Resource):
         return username
 
 
-@api.route('/ice-cream')
+@api.route('/list-ice-cream')
 class ListIceCream(Resource):
     """
-    This class supports fetching a list of all pets.
+    This class supports fetching a list of all ice creams.
     """
     def get(self):
         """
-        This method returns all pets.
+        This method returns all ice creams listed.
         """
         return db.get_ice_cream()
