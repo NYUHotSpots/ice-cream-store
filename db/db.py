@@ -15,10 +15,8 @@ def get_ice_cream():
     """
     A function to return all chat rooms.
     """
-    print(DB_Path)
-    print(ICE_CREAM_DB)
     try:
-        with open(ICE_CREAM_DB[1:]) as file:
+        with open(ICE_CREAM_DB) as file:
             return json.loads(file.read())
     except FileNotFoundError:
         return None
