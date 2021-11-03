@@ -44,3 +44,39 @@ class EndpointTestCase(TestCase):
         ret = lr.get()
         for val in ret.values():
             self.assertIsInstance(val, dict)
+
+    def create_user(self):
+        """
+        Returns the name
+        """
+        name = "username"
+        user = ep.CreateUser(Resource)
+        ret = user.post(name)
+        self.assertEquals(name, ret)
+
+    def ice_cream_flavors1(self):
+        """
+        Post-condition 1: return is a dictionary.
+        """
+        flavors = ep.GetIceCream(Resource)
+        ret = flavors.get()
+        for val in ret.values():
+            self.assertIsInstance(val, dict)
+
+    def ice_cream_flavors2(self):
+        """
+        Post-condition 2: keys to the dict are strings
+        """
+        flavors = ep.GetIceCream(Resource)
+        ret = flavors.get()
+        for key in ret:
+            self.assertIsInstance(key, str)
+
+    def ice_cream_flavors3(self):
+        """
+        Post-condition 3: the values in the dict are themselves dicts
+        """
+        flavors = ep.GetIceCream(Resource)
+        ret = flavors.get()
+        for val in ret.values():
+            self.assertIsInstance(val, dict)
