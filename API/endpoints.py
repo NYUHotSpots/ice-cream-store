@@ -69,7 +69,7 @@ class CreateUser(Resource):
 
 
 @api.route('/ice-cream')
-class GetIceCream(Resource):
+class ListIceCream(Resource):
     """
     This class supports fetching a list of all pets.
     """
