@@ -7,7 +7,7 @@ Gradually, we will fill in actual calls to our datastore.
 import json
 import os
 
-DB_Path = os.environ["AnotherPath"]
+DB_Path = os.environ["DB_Path"]
 ICE_CREAM_DB = f"{DB_Path}/db/ice_cream.json"
 
 
