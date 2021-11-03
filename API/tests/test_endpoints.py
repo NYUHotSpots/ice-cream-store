@@ -63,25 +63,25 @@ class EndpointTestCase(TestCase):
         for val in ret.values():
             self.assertIsInstance(val, dict)
 
-    # def test_ice_cream_flavors2(self):
-    #     """
-    #     Post-condition 2: keys to the dict are strings
-    #     """
-    #     flavors = ep.ListIceCream(Resource)
-    #     ret = flavors.get()
-    #     for key in ret:
-    #         self.assertIsInstance(key, str)
+    def test_ice_cream_flavors2(self):
+        """
+        Post-condition 2: keys to the dict are strings
+        """
+        flavors = ep.ListIceCream(Resource)
+        ret = flavors.get()
+        for key in ret:
+            self.assertIsInstance(key, str)
 
-    # def test_ice_cream_flavors3(self):
-    #     """
-    #     Post-condition 3: the values in the dict are themselves dicts
-    #     """
-    #     flavors = ep.ListIceCream(Resource)
-    #     ret = flavors.get()
-    #     for val in ret.values():
-    #         self.assertIsInstance(val, dict)
+    def test_ice_cream_flavors3(self):
+        """
+        Post-condition 3: the values in the dict are themselves dicts
+        """
+        flavors = ep.ListIceCream(Resource)
+        ret = flavors.get()
+        for val in ret.values():
+            self.assertIsInstance(val, dict)
 
-    # def test_price(self):
-    #     flavors = ep.ListIceCream(Resource)
-    #     price = flavors.get_price("Vanilla")
-    #     self.assertIsInstance(price, int)
+    def test_price(self):
+        flavors = ep.ListIceCream(Resource)
+        price = flavors.get_price("Vanilla")
+        self.assertIsInstance(price, int)
