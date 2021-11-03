@@ -45,7 +45,7 @@ class EndpointTestCase(TestCase):
         for val in ret.values():
             self.assertIsInstance(val, dict)
 
-    def create_user(self):
+    def test_create_user(self):
         """
         Returns the name
         """
@@ -54,34 +54,34 @@ class EndpointTestCase(TestCase):
         ret = user.post(name)
         self.assertEquals(name, ret)
 
-    def ice_cream_flavors1(self):
+    def test_ice_cream_flavors1(self):
         """
         Post-condition 1: return is a dictionary.
         """
-        flavors = ep.GetIceCream(Resource)
+        flavors = ep.ListIceCream(Resource)
         ret = flavors.get()
         for val in ret.values():
             self.assertIsInstance(val, dict)
 
-    def ice_cream_flavors2(self):
-        """
-        Post-condition 2: keys to the dict are strings
-        """
-        flavors = ep.GetIceCream(Resource)
-        ret = flavors.get()
-        for key in ret:
-            self.assertIsInstance(key, str)
+    # def test_ice_cream_flavors2(self):
+    #     """
+    #     Post-condition 2: keys to the dict are strings
+    #     """
+    #     flavors = ep.ListIceCream(Resource)
+    #     ret = flavors.get()
+    #     for key in ret:
+    #         self.assertIsInstance(key, str)
 
-    def ice_cream_flavors3(self):
-        """
-        Post-condition 3: the values in the dict are themselves dicts
-        """
-        flavors = ep.GetIceCream(Resource)
-        ret = flavors.get()
-        for val in ret.values():
-            self.assertIsInstance(val, dict)
+    # def test_ice_cream_flavors3(self):
+    #     """
+    #     Post-condition 3: the values in the dict are themselves dicts
+    #     """
+    #     flavors = ep.ListIceCream(Resource)
+    #     ret = flavors.get()
+    #     for val in ret.values():
+    #         self.assertIsInstance(val, dict)
 
-    def it_fetches_price(self):
-        flavors = ep.GetIceCream(Resource)
-        price = flavors.get_price("Vanilla")
-        self.assertIsInstance(price, int)
+    # def test_price(self):
+    #     flavors = ep.ListIceCream(Resource)
+    #     price = flavors.get_price("Vanilla")
+    #     self.assertIsInstance(price, int)
