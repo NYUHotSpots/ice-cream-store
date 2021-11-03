@@ -80,3 +80,8 @@ class EndpointTestCase(TestCase):
         ret = flavors.get()
         for val in ret.values():
             self.assertIsInstance(val, dict)
+
+    def it_fetches_price(self):
+        flavors = ep.GetIceCream(Resource)
+        price = flavors.get_price("Vanilla")
+        self.assertIsInstance(price, int)

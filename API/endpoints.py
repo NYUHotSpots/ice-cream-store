@@ -78,3 +78,6 @@ class ListIceCream(Resource):
         This method returns all ice creams listed.
         """
         return db.get_ice_cream()
+
+    def get_price(self, flavor: str) -> int:
+        return self.get()[flavor]["price"]
