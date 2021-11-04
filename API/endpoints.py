@@ -61,6 +61,13 @@ class CreateUser(Resource):
     """
     This class supports fetching a list of all Users.
     """
+
+    def get_username(self):
+        """
+        This method asks the user for a username
+        """
+        return input("Enter a username: ")
+
     def post(self, username):
         """
         This method adds the user to the database

@@ -13,7 +13,7 @@ ICE_CREAM_DB = f"{DB_Path}/db/ice_cream.json"
 
 def get_ice_cream():
     """
-    A function to return all chat rooms.
+    A function to return all ice cream flavors and price
     """
     print(ICE_CREAM_DB)
     try:
@@ -21,3 +21,10 @@ def get_ice_cream():
             return json.loads(file.read())
     except FileNotFoundError:
         return None
+
+
+def get_users():
+    """
+    A function to get all users
+    """
+    return {"user1", "user2"}

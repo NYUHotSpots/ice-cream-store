@@ -45,7 +45,7 @@ class EndpointTestCase(TestCase):
         for val in ret.values():
             self.assertIsInstance(val, dict)
 
-    def test_create_user(self):
+    def test_CreateUser(self):
         """
         Returns the name
         """
