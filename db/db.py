@@ -8,7 +8,15 @@ import json
 import os
 
 DB_Path = os.environ["DB_Path"]
-ICE_CREAM_DB = f"{DB_Path}/db/ice_cream.json"
+TEST_MODE = os.environ.get("TEST_MODE", 0)
+
+if TEST_MODE:
+    DB_DIR = f"{DB_Path}/db/test_dbs"
+else:
+    DB_DIR = f"{DB_Path}/db"
+
+
+ICE_CREAM_DB = f"{DB_DIR}/ice_cream.json"
 
 
 def get_ice_cream():
