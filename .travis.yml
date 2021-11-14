@@ -9,7 +9,7 @@ env:
     - PYTHONPATH=/home/travis/build/ColdScoop/ice-cream-store/
 
 script:
-    - make tests
+    - make all_tests
 
 deploy:
     - provider: heroku
