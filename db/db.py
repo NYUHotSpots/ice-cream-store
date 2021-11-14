@@ -18,6 +18,10 @@ else:
 
 ICE_CREAM_DB = f"{DB_DIR}/ice_cream.json"
 
+OK = 0
+NOT_FOUND = 1
+DUPLICATE = 2
+
 
 def get_ice_cream():
     """
@@ -36,3 +40,20 @@ def get_users():
     A function to get all users
     """
     return {"user1", "user2"}
+
+
+# def add_user(username):
+#     """
+#     Add a user to the user database.
+#     Until we are using a real DB, we have a potential
+#     race condition here.
+#     """
+#     users = get_users()
+#     if users is None:
+#         return NOT_FOUND
+#     elif username in users:
+#         return DUPLICATE
+#     else:
+#         users[username] = {"num_users": 0}
+#         write_users(users)
+#         return OK

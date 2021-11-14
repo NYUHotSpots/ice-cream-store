@@ -3,11 +3,11 @@ This is the file containing all of the endpoints for our flask app.
 The endpoint called `endpoints` will return all available endpoints.
 """
 
-# from http import HTTPStatus
+from http import HTTPStatus
 from flask import Flask
 from flask_restx import Resource, Api
 import db.db as db
-# import werkzeug.exceptions as wz
+import werkzeug.exceptions as wz
 
 app = Flask(__name__)
 api = Api(app)
@@ -35,6 +35,8 @@ class ListRooms(Resource):
     """
     This endpoint returns a list of all rooms.
     """
+    @api.response(HTTPStatus.OK, 'Success')
+    @api.response(HTTPStatus.NOT_FOUND, 'Not Found')
     def get(self):
         """
         Returns a list of all chat rooms.
@@ -57,17 +59,28 @@ class Endpoints(Resource):
         return {"Available endpoints": endpoints}
 
 
-@api.route('/CreateUser')
+@api.route('/create_user/<username>')
 class CreateUser(Resource):
     """
-    This class supports fetching a list of all Users.
+    This class supports adding a user to the chat room.
     """
-
+    @api.response(HTTPStatus.OK, 'Success')
+    @api.response(HTTPStatus.NOT_FOUND, 'Not Found')
+    @api.response(HTTPStatus.NOT_ACCEPTABLE, 'A duplicate key')
     def post(self, username):
         """
-        This method adds the user to the database
+        This method adds a user to the chatroom.
+        """
+        """
+        This method adds a room to the room db.
         """
         return username
+        # ret = db.add_user(username)
+        # if ret == db.NOT_FOUND:
+        #     raise (wz.NotFound("User db not found."))
+        # elif ret == db.DUPLICATE:
+        #     raise (wz.NotAcceptable("User name already exists."))
+        # return f"{username} added."
 
 
 @api.route('/list-ice-cream')
@@ -75,11 +88,17 @@ class ListIceCream(Resource):
     """
     This class supports fetching a list of all ice creams.
     """
+    @api.response(HTTPStatus.OK, 'Success')
+    @api.response(HTTPStatus.NOT_FOUND, 'Not Found')
     def get(self):
         """
         This method returns all ice creams listed.
         """
-        return db.get_ice_cream()
+        ice_creams = db.get_ice_cream()
+        if ice_creams is None:
+            raise (wz.NotFound("Ice cream menu not found"))
+        else:
+            return ice_creams
 
     def get_price(self, flavor: str) -> int:
         return self.get()[flavor]["price"]
