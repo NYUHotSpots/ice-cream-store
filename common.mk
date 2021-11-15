@@ -5,7 +5,7 @@ REQ_DIR = .
 PYDOC = python3 -m pydoc -w
 TESTFINDER = nosetests
 
-export TEST_MODE = 0
+export TEST_MODE = 1
 
 FORCE:
 

@@ -1,4 +1,14 @@
 {
-    "Vanilla": {"price": 1},
-    "Chocolate": {"price": 27}
+    "Vanilla": {
+        "price": "1"
+    },
+    "Chocolate": {
+        "price": "27"
+    },
+    "Mango": {
+        "price": "10"
+    },
+    "Strawberry": {
+        "price": "10"
+    }
 }

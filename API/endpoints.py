@@ -75,12 +75,12 @@ class CreateUser(Resource):
         This method adds a room to the room db.
         """
         return username
-        # ret = db.add_user(username)
-        # if ret == db.NOT_FOUND:
-        #     raise (wz.NotFound("User db not found."))
-        # elif ret == db.DUPLICATE:
-        #     raise (wz.NotAcceptable("User name already exists."))
-        # return f"{username} added."
+        ret = db.add_user(username)
+        if ret == db.NOT_FOUND:
+            raise (wz.NotFound("User db not found."))
+        elif ret == db.DUPLICATE:
+            raise (wz.NotAcceptable("User name already exists."))
+        return f"{username} added."
 
 
 @api.route('/list-ice-cream')
@@ -101,4 +101,4 @@ class ListIceCream(Resource):
             return ice_creams
 
     def get_price(self, flavor: str) -> int:
-        return self.get()[flavor]["price"]
+        return int(self.get()[flavor]["price"])

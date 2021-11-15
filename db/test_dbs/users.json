@@ -1,0 +1,14 @@
+{
+    "Patrick": {
+        "type": "SELLER"
+    },
+    "Omar": {
+        "type": "SELLER"
+    },
+    "Jimena": {
+        "type": "SELLER"
+    }, 
+    "Abby": {
+        "type": "BUYER"
+    }
+}
