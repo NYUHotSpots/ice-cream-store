@@ -4,6 +4,7 @@
 
 ## Big Picture
 Sellers: users who want to sell their ice cream on our platform
+
 Buyers: users who want to buy their ice cream from sellers on the platform
 
 
