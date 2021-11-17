@@ -11,17 +11,21 @@ Buyers: users who want to buy their ice cream from sellers on the platform
 ## Requirements
 - CREATE
   - Sellers can create new ice cream menu options
+    - default cost of ice cream option is $0 unless specified when listing is created
   - New users (sellers and customers)
+    - default account created is a Buyer/customer account
   - Logins information for users
 - READ
   - Buyers read menu items, pricing, shopping cart
   - Sellers read a list of orders
 - UPDATE
   - Sellers update quantity
-  - Users to add items to Shopping Cart
+  - Sellers update cost of ice cream listed
+  - Users can add items to Shopping Cart
+  - Users can edit quantity of each item in Shopping Cart
   - User billing information and address
 - DELETE
-  - Sellers remove their menus items
+  - Sellers remove their menus items from listing
   - Users remove items from Shopping Cart
 
 ## Design 
