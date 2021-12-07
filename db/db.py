@@ -6,6 +6,8 @@ Gradually, we will fill in actual calls to our datastore.
 
 import json
 import os
+import pymongo as pm
+import bson.json_util as bsutil
 
 DB_Path = os.environ["DB_Path"] #is DEMO_HOME, maybe rename later
 TEST_MODE = os.environ.get("TEST_MODE", 0)
@@ -23,6 +25,9 @@ OK = 0
 NOT_FOUND = 1
 DUPLICATE = 2
 
+
+client = pm.MongoClient()
+print(client)
 
 def get_ice_cream():
     """
