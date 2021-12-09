@@ -23,7 +23,7 @@ jobs:
         
       - name: Run Tests
         run: |
-          echo ${{github.workspace}} >> $PYTHONPATH
+          export PYTHONPATH=src
           make all_tests
       
       - name: Deploy to Heroku
