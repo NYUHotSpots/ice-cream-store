@@ -7,7 +7,7 @@ Gradually, we will fill in actual calls to our datastore.
 import json
 import os
 
-DB_Path = os.environ["DB_Path"] #is DEMO_HOME, maybe rename later
+DB_Path = os.environ["DB_Path"]
 TEST_MODE = os.environ.get("TEST_MODE", 0)
 
 if TEST_MODE:
