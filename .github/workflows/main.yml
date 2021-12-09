@@ -23,10 +23,11 @@ jobs:
         
       - name: Run Tests
         env:
-          DB_Path: /
+          DB_Path: ${{GITHUB_WORKSPACE}}
         run: |
           make all_tests
           echo DB_Path
+          echo ${{GITHUB_WORKSPACE}}
       
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
