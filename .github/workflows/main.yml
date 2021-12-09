@@ -23,7 +23,7 @@ jobs:
         
       - name: Run Tests
         run: |
-          export PYTHONPATH=src
+          export PYTHONPATH=$PWD
           make all_tests
       
       - name: Deploy to Heroku
