@@ -2,11 +2,8 @@
 This file holds the tests for db.py.
 """
 
+from db import db
 from unittest import TestCase, skip
-# import random
-
-from db import db as db
-
 
 class DBTestCase(TestCase):
     def setUp(self):
