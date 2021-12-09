@@ -23,8 +23,8 @@ jobs:
         
       - name: Run Tests
         run: |
+          echo ${{github.workspace}} >> $PYTHONPATH
           make all_tests
-          echo ${{github.workspace}}
       
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
