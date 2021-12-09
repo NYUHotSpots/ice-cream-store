@@ -22,7 +22,11 @@ jobs:
         run: pip install -r requirements-dev.txt
         
       - name: Run Tests
+        env:
+          DB_Path: helloworld
         run: |
+          echo "Hello from yml file"
+          echo $DB_Path
           export PYTHONPATH=$PWD
           make all_tests
       
