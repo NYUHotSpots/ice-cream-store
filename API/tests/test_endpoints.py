@@ -3,7 +3,7 @@ This file holds the tests for endpoints.py.
 """
 
 from unittest import TestCase, skip
-from API import endpoints as ep
+import API.endpoints as ep
 from flask_restx import Resource, Api
 
 class EndpointTestCase(TestCase):
