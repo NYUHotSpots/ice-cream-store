@@ -3,7 +3,7 @@ API_DIR = API
 DB_DIR = db
 REQ_DIR = .
 PYDOC = python3 -m pydoc -w
-TESTFINDER = nosetests
+TESTFINDER = nose2
 
 export TEST_MODE = 1
 
