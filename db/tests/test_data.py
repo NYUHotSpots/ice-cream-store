@@ -5,7 +5,7 @@ This file holds the tests for db.py.
 from unittest import TestCase, skip
 # import random
 
-import db.db as db
+from db import db as db
 
 
 class DBTestCase(TestCase):
