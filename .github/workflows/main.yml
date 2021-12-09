@@ -23,10 +23,10 @@ jobs:
         
       - name: Run Tests
         env:
-          DB_Path: ${{github.repository}}
+          DB_Path: bob
         run: |
           make all_tests
-          echo DB_Path
+          echo $DB_Path
           echo ${{github.repository}}
       
       - name: Deploy to Heroku
